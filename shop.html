@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VECHNOST.ID</title>
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1f2e);
+  color: #e0e0e0;
+  margin: 0;
+  padding-top: 80px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px px;
+  background: #111;
+  width: 100%;
+  top:0;
+  z-index:1000;
+}
+.header input.search-bar {
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+
+  /* Efek 3D */
+  background: linear-gradient(145deg, #00aaff, #0077cc);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.4), -4px -4px 8px rgba(28, 174, 12, 0.1);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header input.search-bar:focus {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.5), -6px -6px 12px rgba(255,255,255,0.15);
+
+
+}
+.shop-container {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:24px;
+  max-width:1100px;
+  margin:0 auto 40px auto;
+}
+@media(max-width:900px){.shop-container{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.shop-container{grid-template-columns:1fr;}}
+.product-card{
+  background:#111;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 0 15px rgba(0,170,255,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 0 25px rgba(0,170,255,0.35);
+}
+.product-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:12px;
+}
+.product-card h3{
+  margin:8px 0 4px;
+  color:#00aaff;
+}
+.original-price{
+  text-decoration: line-through;
+  color:#be1111;
+  margin-right:10px;
+}
+.product-card p{
+  font-weight:bold;
+  color:#00ffcc;
+  margin:5px 0;
+}
+.product-card a{
+  display:inline-block;
+  background:#00aaff;
+  color:white;
+  padding:8px 80px;
+  border-radius:100px;
+  text-decoration:none;
+  font-weight:500;
+  box-shadow:0 4px #0077cc;
+  transform:translateY(0);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+.product-card a:hover{
+  background:#0077cc;
+  transform:translateY(-2px);
+  box-shadow:0 6px #005fa3;
+}
+.btn-container-bawah{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+.btn-container-bawah button{
+  padding:10px 20px;
+  border-radius:8px;
+  border:none;
+  background:#00aaff;
+  color:white;
+  font-weight:500;
+  cursor:pointer;
+  box-shadow:0 4px #0077cc;
+  transition:transform 0.2s,box-shadow 0.2s,background 0.3s;
+}
+.btn-container-bawah button:hover{
+  background:#0077cc;
+  transform:translateY(-2px);
+  box-shadow:0 6px #005fa3;
+}
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header input.search-bar {
+    width: 100%;
+    max-width: none;
+  }
+  .header img {
+    max-height: 60px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://i.ibb.co.com/99n4rLfR/IMG-3676.png" alt="Logo Kiri" style="height:80px;">
+  <input class="search-bar" placeholder="Search...">
+  <img src="https://i.ibb.co.com/4Z8KDjTs/IMG-3379.png" alt="Logo Kanan" style="height:80px;">
+</div>
+
+<div style="padding:50px;">
+
+<div class="btn-container-bawah">
+  <button data-category="pet">PET</button>
+  <button data-category="pet-tumbal">PET TUMBAL</button>
+  <button data-category="sheckles">SHECKLES</button>
+  <button data-category="joki">JOKI</button>
+</div>
+
+<div class="shop-container">
+
+<!-- PET 15 item -->
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/4R09KtN7/IMG-2975.png"></a><h3>Kitsune</h3><span class="original-price">Rp300.000</span><p>Rp295.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/prKbSBg8/IMG-2953-2.png"></a><h3>Raccoon</h3><span class="original-price">Rp110.000</span><p>Rp105.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/ynGyPXCV/IMG-2971.png"></a><h3>Disco Bee</h3><span class="original-price">Rp90.000</span><p>Rp85.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/Fbwhxjmz/IMG-2957.png"></a><h3>Butterfly</h3><span class="original-price">Rp60.000</span><p>Rp55.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/vC3f0RT2/IMG-3294.png"></a><h3>Fennec Fox</h3><span class="original-price">Rp60.000</span><p>Rp55.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/3yPtzfyK/IMG-2974.png"></a><h3>Spinosaurus</h3><span class="original-price">Rp30.000</span><p>Rp25.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/8nD8PXmQ/IMG-2972.png"></a><h3>Dragonfly</h3><span class="original-price">Rp30.000</span><p>Rp25.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/bjKGqLWn/IMG-2973.jpg"></a><h3>Mimic Octopus</h3><span class="original-price">Rp30.000</span><p>Rp25.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/wZ70Vw7B/IMG-3674.png"></a><h3>Queen Bee</h3><span class="original-price">Rp25.000</span><p>Rp20.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/Q3GtT1JW/IMG-2960.png"></a><h3>T-rex</h3><span class="original-price">Rp25.000</span><p>Rp20.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/NdrDzHgc/IMG-3295.png"></a><h3>Dilophosaurus</h3><span class="original-price">Rp15.000</span><p>Rp10.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/gL1GRfgw/IMG-2969.png"></a><h3>Brontosaurus</h3><span class="original-price">Rp15.000</span><p>Rp10.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/bMxHjwPC/IMG-2963.png"></a><h3>Corrupted Kitsune</h3><span class="original-price">Rp20.000</span><p>Rp15.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/wrPh9vng/IMG-2961.png"></a><h3>Mooncat</h3><span class="original-price">Rp12.000</span><p>Rp8.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet"><a href="#"><img src="https://i.ibb.co.com/Fqh0c142/IMG-2959.png"></a><h3>Red Fox</h3><span class="original-price">Rp12.000</span><p>Rp8.000</p><a href="#">BUY</a></div>
+
+<!-- PET TUMBAL -->
+ <div class="product-card" data-category="pet-tumbal"><a href="#"><img src="https://i.ibb.co.com/93dVxTSn/IMG-3692-removebg-preview.png"></a><h3>Level 20-75</h3><span class="original-price">Rp22.000</span><p>Rp15.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet-tumbal"><a href="#"><img src="https://i.ibb.co.com/93dVxTSn/IMG-3692-removebg-preview.png"></a><h3>Level 20</h3><span class="original-price">Rp1.000</span><p>Rp500</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet-tumbal"><a href="#"><img src="https://i.ibb.co.com/93dVxTSn/IMG-3692-removebg-preview.png"></a><h3>Level 30</h3><span class="original-price">Rp2.000</span><p>Rp1.500</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet-tumbal"><a href="#"><img src="https://i.ibb.co.com/93dVxTSn/IMG-3692-removebg-preview.png"></a><h3>Level 45</h3><span class="original-price">Rp4.000</span><p>R3.500</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet-tumbal"><a href="#"><img src="https://i.ibb.co.com/93dVxTSn/IMG-3692-removebg-preview.png"></a><h3>Level 60</h3><span class="original-price">Rp6.000</span><p>Rp5.500</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="pet-tumbal"><a href="#"><img src="https://i.ibb.co.com/93dVxTSn/IMG-3692-removebg-preview.png"></a><h3>Level 75</h3><span class="original-price">Rp10.000</span><p>Rp9.500</p><a href="#">BUY</a></div>
+
+
+<!-- SHECKLES -->
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png"></a><h3>1sx</h3><span class="original-price">Rp1.000</span><p>Rp500</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>5sx</h3><span class="original-price">Rp5.000</span><p>Rp2.500</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>10sx</h3><span class="original-price">Rp10.000</span><p>Rp5.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>20sx</h3><span class="original-price">Rp20.000</span><p>Rp10.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>50sx</h3><span class="original-price">Rp35.000</span><p>Rp25.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>100sx</h3><span class="original-price">Rp50.000</span><p>Rp35.000</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>500sx</h3><span class="original-price">Rp100.000</span><p>Rp80.00</p><a href="#">BUY</a></div>
+<div class="product-card" data-category="sheckles"><a href="#"><img src="https://i.ibb.co.com/7JjDf8bk/IMG-2996.png" ></a><h3>1000sx</h3><span class="original-price">Rp200.000</span><p>Rp170.000</p><a href="#">BUY</a></div>
+
+<!--JOKI-->
+<div class="product-card" data-category="joki"><a href="#"><img src="https://i.ibb.co.com/PG3nrKz1/IMG-3691-removebg-preview.png"></a><h3>catch them all</h3><span class="original-price">Rp30.000</span><p>Rp20.000</p><a href="#">BUY</a></div>
+</div>
+</div>
+<script> const buttons = document.querySelectorAll('.btn-container-bawah button'); buttons.forEach(btn=>{ btn.addEventListener('click',()=>{ const category = btn.getAttribute('data-category'); const products = document.querySelectorAll('.product-card'); products.forEach(product=>{ if(category==='all' || product.getAttribute('data-category')===category){ product.style.display='inline-block'; }else{product.style.display='none';} }); }); }); // Nomor WhatsApp tujuan
+const waNumber = "6288289171435";
+
+// Ambil semua tombol BUY
+const buyButtons = document.querySelectorAll('.product-card a[href="#"]');
+
+buyButtons.forEach(button => {
+  const productCard = button.closest('.product-card');
+  const productName = productCard.querySelector('h3').innerText;
+  // Ganti href menjadi WA dengan teks otomatis
+  button.href = `https://wa.me/${waNumber}?text=Halo,%20saya%20mau%20order%20${encodeURIComponent(productName)}`;
+  button.target = "_blank"; // buka di tab baru
+});</script>
+</body>
+</html>
